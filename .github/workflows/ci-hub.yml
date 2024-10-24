@@ -60,8 +60,3 @@ jobs:
             --push \
             -f ./Dockerfile \
             .
-
-      - name: Push the Docker image to ECR
-        run: |
-          docker push $REPOSITORY_URI:latest 
-          docker push $REPOSITORY_URI:$COMMIT
