@@ -51,7 +51,7 @@ jobs:
             -t $REPOSITORY_URI:$VERSION \
             --cache-from=type=local,src=/tmp/.buildx-cache \
             --cache-to=type=local,dest=/tmp/.buildx-cache \
-            --load \
+            --push \
             -f ./Dockerfile \
             .
       - name: Log in to Docker Hub
