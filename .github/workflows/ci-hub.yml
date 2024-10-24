@@ -48,7 +48,7 @@ jobs:
         run: |
           docker buildx create --use
           docker buildx build \
-            --platform linux/amd64,linux/arm64 \
+            --platform linux/amd64,linux/arm64,linux/arm64/v8 \
             --build-arg COMMIT=$COMMIT \
             --build-arg VERSION=$VERSION \
             --build-arg BUILDNUM=$BUILDNUM \
