@@ -23,6 +23,8 @@ RUN apk add --no-cache ca-certificates
 COPY --from=builder /story-geth/build/bin/geth /usr/local/bin/
 
 EXPOSE 8545 8546 30303 30303/udp
+
+WORKDIR /root/.story/geth
 ENTRYPOINT ["geth"]
 
 # Add some metadata labels to help programmatic image consumption
